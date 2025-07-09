@@ -12,9 +12,11 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Commands {
-    // TODO: Convert to vector for multipackage installs
-    Install { package: String },
+    Install { package: Vec<String> },
     List {},
+    Update {},
+    Upgrade {},
+    Remove { package: String },
     Bobr {},
 }
 
@@ -23,12 +25,21 @@ fn main() {
 
     match &cli.command {
         Commands::Install { package } => {
-            println!("Installing package {package:?}");
+            println!("Installing packages {:?}", package);
         }
         Commands::List {} => {
             println!("Heres your packages");
         }
-        Commands::Bobr {  } => {
+        Commands::Update {} => {
+            todo!()
+        }
+        Commands::Upgrade {} => {
+            todo!()
+        }
+        Commands::Remove { package } => {
+            println!("Removing package {package:?}")
+        }
+        Commands::Bobr {} => {
             print!("{}", crate::bobr::BOBR);
         }
     }

